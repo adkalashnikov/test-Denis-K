@@ -1,0 +1,28 @@
+.main-section {
+  position: relative;
+  padding: 50px 0;
+
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 116px 0 175px 0;
+  }
+
+
+  &__bg {
+    display: none;
+
+    @media (min-width: 960px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      right: 0;
+      bottom: 0;
+      border-left: 2px solid $color-athens-gray;
+      background: $color-alabaster;
+    }
+  }
+}

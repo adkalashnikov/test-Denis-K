@@ -1,0 +1,50 @@
+.proposal-section {
+  padding: 0 15px;
+  transition: padding 0.3s ease;
+  max-width: 960px;
+  visibility: hidden;
+
+  @media (min-width: 768px) {
+    padding-left: 96px;
+  }
+
+  @media (min-width: 960px) {
+    padding-left: 198px;
+  }
+
+  &.is-visible {
+    animation: slideInLeft 1s forwards ease;
+  }
+
+  &__title {
+    font-size: rem(26);
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-family: $secondary-bold-font-family;
+    color: $color-pickled-bluewood;
+    transition: font .3s  ease;
+    margin-bottom: 30px;
+
+    @media (min-width: 560px) {
+      font-size: rem(38);
+    }
+
+    @media (min-width: 960px) {
+      font-size: rem(48);
+      margin-bottom: 58px;
+    }
+  }
+
+  &__text {
+    p {
+      &:first-child {
+        margin-bottom: 20px;
+
+        @media (min-width: 960px) {
+          margin-bottom: 26px;
+        }
+      }
+    }
+  }
+}

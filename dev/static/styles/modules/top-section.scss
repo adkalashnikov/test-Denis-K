@@ -1,0 +1,54 @@
+.top-section {
+  background: url("../images/content/banner.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  min-height: 500px;
+
+  &__text {
+    text-align: right;
+    padding: 70px 0 50px 0;
+    color: $color-white;
+    overflow: hidden;
+    transition: padding 0.3s ease;
+    visibility: hidden;
+
+    @media (min-width: 1200px) {
+      padding-top: 190px;
+      padding-bottom: 305px;
+    }
+
+    &.is-visible {
+      animation: slideInUp 1s forwards ease;
+    }
+  }
+
+  &__title {
+    font-size: rem(26);
+    line-height: 1;
+    text-transform: uppercase;
+    color: rgba($color-white, 0.35);
+    font-family: $secondary-font-family;
+    transition: font .3s  ease;
+
+    @media (min-width: 560px) {
+      font-size: rem(46);
+    }
+
+    @media (min-width: 960px) {
+      font-size: rem(70);
+    }
+
+    @media (min-width: 1360px) {
+      font-size: rem(96);
+    }
+  }
+
+  &__sub-title {
+    padding-top: 20px;
+    font-size: rem(22);
+
+    @media (min-width: 1200px) {
+      font-size: rem(55);
+      padding-top: 32px;
+    }
+  }
+}

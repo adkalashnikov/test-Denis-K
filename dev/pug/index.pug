@@ -1,0 +1,15 @@
+extends template/main
+
+block variables
+    - var title = 'DE`PO test Denis K'
+    - var pageClass = 'home-page'
+
+block body
+    include pages/home/top-section
+    main.main-section
+        .main-section__bg
+        include pages/home/proposal-section
+        include pages/home/services-section
+        include pages/home/news-section
+    include pages/home/bottom-nav-section
+    include modules/footer/footer

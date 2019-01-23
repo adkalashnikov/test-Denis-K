@@ -1,0 +1,127 @@
+.footer {
+  background: $color-martinique;
+  padding: 30px 0;
+  transition: padding 0.3s ease;
+  color: $color-white;
+  position: relative;
+  font-family: $secondary-font-family;
+  text-transform: uppercase;
+  font-size: rem(15);
+
+  @media (min-width: 768px) {
+    padding: 37px 0 39px 0;
+  }
+
+  @media (min-width: 992px) {
+    padding-left: 120px;
+  }
+
+  @media (min-width: 1500px) {
+    padding-left: 15px;
+  }
+
+  &__stripe {
+    display: none;
+
+    @media (min-width: 960px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 100px;
+      bottom: 0;
+      width: 2px;
+      background: rgba($color-white, 0.4);
+    }
+  }
+
+  &__container {
+    @media (min-width: 460px) {
+      display: flex;
+    }
+
+    @media (min-width: 768px) {
+      justify-content: space-between;
+    }
+  }
+
+  &__copy {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    @media (min-width: 460px) {
+      margin: 0;
+      padding: 0 15px;
+      flex-grow: 1;
+    }
+
+    @media (min-width: 650px) {
+      flex-direction: row;
+    }
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-grow: 0;
+    }
+
+    span {
+      color: rgba($color-white, 0.35);
+
+      @media (min-width: 650px) {
+        margin-left: 34px;
+      }
+    }
+  }
+
+  &__language-chooser {
+    color: $color-white;
+    transition: padding 0.3s ease;
+
+    @media (min-width: 1200px) {
+      margin-right: 153px;
+    }
+
+    li {
+      &:not(.active) {
+        display: none;
+      }
+
+      &.active {
+        a {
+          position: relative;
+          padding-right: 20px;
+
+          &::after {
+            position: absolute;
+            bottom: 8px;
+            top: auto;
+            width: 0;
+            height: 0;
+            border: inset 4px;
+            content: '';
+            border-bottom-width: 0;
+            border-top-style: solid;
+            border-color: $color-white transparent transparent;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 4px;
+          }
+        }
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: rem(15px);
+        font-weight: 700;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: darken($color-white, 50%);
+        }
+      }
+    }
+  }
+}
